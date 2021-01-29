@@ -11,4 +11,4 @@ string.o: string.cpp string.h
 	g++ -c string.cpp
 
 clean: 
-	rm *.o a.out
+	rm *.o a.out *.gch

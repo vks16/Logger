@@ -17,32 +17,14 @@ private:
 public:
     void SetLogLevel(int level); // sets a log level
 
-    void info(String& msg, int priority = 0) const // prints info message to console
-    {
-        if (priority == 1 && m_LogLevel < LOG_INFO)
-            m_LogLevel = LOG_INFO;
+    void info(const char* msg, int priority) const; // prints info message to console
+    
 
-        if (m_LogLevel >= LOG_INFO)
-            std::cout << "[Info]: " << msg << std::endl;
-    }
+    void warn(const char *msg, int priority) const; // prints warn message to console
+   
 
-    void warn(String& msg, int priority = 0) const // prints warn message to console
-    {
-        if (priority == 1 && m_LogLevel < LOG_INFO)
-            m_LogLevel = LOG_WARN;
-
-        if (m_LogLevel >= LOG_WARN)
-            std::cout << "[Warning]: " << msg << std::endl;
-    }
-
-    void error(String& msg, int priority = 0) const // prints error message to console
-    {
-        if (priority == 1 && m_LogLevel < LOG_INFO)
-            m_LogLevel = LOG_ERROR;
-
-        if (m_LogLevel >= LOG_ERROR)
-            std::cout << "[Error]: " << msg << std::endl;
-    }
+    void error(const char *msg, int priority) const; // prints error message to console
+  
 };
 
 #endif // LOG_H
