@@ -12,15 +12,15 @@ public:
     int m_LogLevel = 0;
 
 public:
-    void SetLogLevel(int level);
+    void SetLogLevel(int level); // sets a log level
 
-    void info(const char* msg);
+    void info(const char* msg); // prints info message to console 
    
 
-    void warn(const char* msg);
+    void warn(const char* msg); // prints warn message to console 
   
 
-    void error(const char* msg);
+    void error(const char* msg); // prints error message to console 
     
 };
 
