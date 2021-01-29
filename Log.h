@@ -2,6 +2,8 @@
 #define Log_H
 
 #include <iostream>
+#include "string.h"
+
 class Log
 {
 public:
@@ -15,7 +17,7 @@ private:
 public:
     void SetLogLevel(int level); // sets a log level
 
-    void info(const char *msg, int priority = 0) const // prints info message to console
+    void info(String& msg, int priority = 0) const // prints info message to console
     {
         if (priority == 1 && m_LogLevel < LOG_INFO)
             m_LogLevel = LOG_INFO;
@@ -24,7 +26,7 @@ public:
             std::cout << "[Info]: " << msg << std::endl;
     }
 
-    void warn(const char *msg, int priority = 0) const // prints warn message to console
+    void warn(String& msg, int priority = 0) const // prints warn message to console
     {
         if (priority == 1 && m_LogLevel < LOG_INFO)
             m_LogLevel = LOG_WARN;
@@ -33,7 +35,7 @@ public:
             std::cout << "[Warning]: " << msg << std::endl;
     }
 
-    void error(const char *msg, int priority = 0) const // prints error message to console
+    void error(String& msg, int priority = 0) const // prints error message to console
     {
         if (priority == 1 && m_LogLevel < LOG_INFO)
             m_LogLevel = LOG_ERROR;
