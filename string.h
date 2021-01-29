@@ -11,9 +11,13 @@ private:
 	unsigned int m_Size;
 
 public:
-	String(const char *string);
+	String(const char*);
 	
+	// Copy constructor
+	String(const String&);
 
+	// If we want to disable copying for this class
+	// String(const String&) = delete;
 	unsigned int length() const;
 	
 

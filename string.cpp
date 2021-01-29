@@ -8,6 +8,14 @@ String::String(const char* string)
 	m_Buffer[m_Size] = '\0';
 }
 
+String::String(const String& other)
+    : m_Size(other.m_Size)
+{
+    m_Buffer = new char[m_Size + 1];
+    memcpy(m_Buffer, other.m_Buffer, m_Size + 1);
+    // here i am not writing \0 at the end, because i know the other string will have that already
+}
+
 String::~String()
 {
     delete[] m_Buffer;
