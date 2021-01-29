@@ -17,13 +17,13 @@ private:
 public:
     void SetLogLevel(int level); // sets a log level
 
-    void info(const char* msg, int priority = 0) const; // prints info message to console
+    void info(const String& msg, int priority = 0) const; // prints info message to console
     
 
-    void warn(const char *msg, int priority = 0) const; // s warn message to console
+    void warn(const String& msg, int priority = 0) const; // s warn message to console
    
 
-    void error(const char *msg, int priority = 0) const; // prints error message to console
+    void error(const String& msg, int priority = 0) const; // prints error message to console
   
 };
 
