@@ -19,6 +19,8 @@ public:
 
 	friend std::ostream &operator<<(std::ostream &stream, const String &string);
 
+	char& operator[](unsigned int index);
+
 	~String();
 };
 

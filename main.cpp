@@ -14,6 +14,6 @@ int main()
     logger.error("This is error");  // this will print because it is error
 
     String str = "vishal";
-    std::cout << str << " " << str.length() << std::endl;
+    std::cout << str[3] << " " << str.length() << std::endl;
     return 0;
 }

@@ -17,6 +17,11 @@ unsigned int String::length() const
 	return m_Size;
 }
 
+char& String::operator[](unsigned int index)
+{
+    return m_Buffer[index];
+}
+
 // To make this class able to work with cout <<
 std::ostream& operator<<(std::ostream& stream, const String& string)
 {
