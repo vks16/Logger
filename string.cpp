@@ -8,6 +8,10 @@ String::String(const char* string)
 	m_Buffer[m_Size] = '\0';
 }
 
+String::~String()
+{
+    delete[] m_Buffer;
+}
 unsigned int String::length() const
 {
 	return m_Size;
