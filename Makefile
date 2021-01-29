@@ -1,5 +1,5 @@
 output: main.o Log.o string.o
-	g++ main.o log.o string.o
+	g++ main.o Log.o string.o
 
 main.o: main.cpp
 	g++ -c main.cpp
